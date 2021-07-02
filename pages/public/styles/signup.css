@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* { font-family: 'Source Sans Pro', sans-serif; box-sizing: border-box }
+
+.signup-form {
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-form h1 {
+    color: #ff4d7a
+}
+
+.signup-form label {
+    margin: 20px;
+    width: 30%;
+    min-width: 200px;
+}
+
+.signup-form label input {
+    width: 100%;    
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    font-size: 18px;
+}
+
+.signup-form label input::placeholder, a {
+    color: #ff4d7a
+}
+
+.signup-form label input:focus {
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.signup-form button {
+    background-color: #ff4d7a;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    margin: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.15s ease-in-out;
+}
+
+.signup-form button:hover {
+    background-color: #df2d5a;
+}
+
+.signup-form button:active {
+    box-shadow: none;
+}
+
+.deactivated {
+    background-color: #6f6f6f !important;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* { margin: 0; box-sizing: border-box; font-family: 'Source Sans Pro', sans-serif; }
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+}
+
+.rant {
+    padding: 20px;
+    min-width: 200px;
+    max-width: 70%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.rantContent {
+    display: flex;
+}
+
+.postInfo {
+    display: flex;
+    margin: 10px 10px 0 10px;
+    border-top: 2px solid #ff4d7a
+}
+
+.postInfo * {
+    padding: 10px 10px 0 10px;
+    color: #858383;
+}
+
+.postInfo .author {
+    margin-right: 40px;
+}
+
+.content {
+    font-size: 20px;
+}
+
+.likes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.likes svg {
+    margin-bottom: 10px;
+}

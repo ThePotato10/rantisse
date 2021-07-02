@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* { margin: 0; box-sizing: border-box; font-family: 'Source Sans Pro', sans-serif; }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.newrant {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #ff4d7a;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 45px;
+    font-size: 18px;
+    border: none;
+    margin: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: #df2d5a;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+.rants {
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: #000A;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.overlay * {
+    width: 300px;
+}
+
+.overlay textarea {
+    height: 400px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.overlay textarea:focus {
+    outline: none;
+}
