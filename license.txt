@@ -1,0 +1,5 @@
+The software and associated documentation files (the "Software") provided here are the copyright of JD Peppelman.
+
+Explicit permission is required from the copyright holder to use, copy, modify, merge, publish, license, sublicense, and/or sell copies of the Software.
+
+If explicit permission is granted, the Software shall be provided as is, and the copyright holder is in no way liable for any damage the Software may cause.
