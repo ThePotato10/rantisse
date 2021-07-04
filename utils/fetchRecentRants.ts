@@ -6,7 +6,8 @@ interface Rant {
     text: string;
     likes: number;
     date: number;
-    authorName: string
+    authorName: string;
+    formattedDate: string;
 }
 
 let rantCollection: Collection<Rant>;

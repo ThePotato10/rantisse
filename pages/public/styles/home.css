@@ -40,6 +40,42 @@ button:active {
 .rants {
     width: 100%;
     height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rant {
+    margin: 20px;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 70%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.likes {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #ff4d7a;
+}
+
+.rantContent {
+    padding: 10px;
+}
+
+.rantContent .info {
+    display: flex;
+}
+
+.rantContent .info * {
+    padding: 10px 10px 0 10px;
+    color: #858383;
 }
 
 .overlay {

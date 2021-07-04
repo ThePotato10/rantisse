@@ -2,6 +2,7 @@ import express from 'express';
 import pug from 'pug';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+
 import { getRantData } from '../utils/getRantData';
 import { getUserLikedRant } from '../utils/getUserLikedRant';
 import { fetchRecentRants } from '../utils/fetchRecentRants';
@@ -14,7 +15,12 @@ dayjs.extend(relativeTime);
 
 pages.get("/", async (req, res, next) => {
     if (req.cookies.uidtoken) {
-        res.send(compileHome({ rants: await fetchRecentRants(3) }));
+        const rants = (await fetchRecentRants(3)).map(rant => {
+            rant.formattedDate = dayjs(rant.date).from(dayjs(Date.now()));
+            return rant;
+        });
+
+        res.send(compileHome({ rants: rants }));
     } else {
         res.redirect("/login");
     }
