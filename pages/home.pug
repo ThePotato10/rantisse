@@ -15,6 +15,10 @@ html(lang="en")
 
     body
         div(class="overlay" onclick="derenderOverlay()")
-        div(class="rants")
-        div(class="newrant")
+        .rants
+            each rant in rants
+                .rant
+                    p #{rant.text}
+
+        .newrant
             button(onclick="createOverlay()") New Rant

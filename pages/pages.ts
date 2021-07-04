@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { getRantData } from '../utils/getRantData';
 import { getUserLikedRant } from '../utils/getUserLikedRant';
+import { fetchRecentRants } from '../utils/fetchRecentRants';
 
 export const pages = express.Router();
 const compileRant = pug.compileFile(__dirname + '/rant.pug');
@@ -11,9 +12,9 @@ const compileHome = pug.compileFile(__dirname + '/home.pug');
 
 dayjs.extend(relativeTime);
 
-pages.get("/", (req, res, next) => {
+pages.get("/", async (req, res, next) => {
     if (req.cookies.uidtoken) {
-        res.send(compileHome());
+        res.send(compileHome({ rants: await fetchRecentRants(3) }));
     } else {
         res.redirect("/login");
     }
