@@ -116,3 +116,9 @@ button:active {
 .overlay textarea:focus {
     outline: none;
 }
+
+@media screen and (orientation: portrait) {
+    .rantContent .info {
+        flex-direction: column;
+    }
+}
