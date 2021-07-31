@@ -68,3 +68,9 @@ body {
 .likes svg {
     margin-bottom: 10px;
 }
+
+@media screen and (orientation: portrait) {
+    .postInfo {
+        flex-direction: column;
+    }
+}
